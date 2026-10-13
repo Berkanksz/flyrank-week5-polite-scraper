@@ -1,12 +1,9 @@
-from fetcher import fetch_page
-
-BASE_URL = "https://books.toscrape.com/catalogue/page-1.html"
+from crawler import discover_book_urls
 
 
 def main():
-    print("Stage 1 test:")
-    html, hit = fetch_page(BASE_URL, cache_filename="catalogue-page-1.html")
-    print(f"Result: {len(html)} characters, cached: {hit}")
+    books, pages = discover_book_urls()
+    print(f"catalogue_pages={pages}, discovered={len(books)}, unique_urls={len(set(b[0] for b in books))}")
 
 
 if __name__ == "__main__":
