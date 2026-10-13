@@ -1,0 +1,15 @@
+# Cache directory (saved HTML files for development)
+cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Output files
+output/
+
+# OS / Editor
+.DS_Store
+.vscode/
